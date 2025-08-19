@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoding AI Minds</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="sing.css">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="205x154" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+       
+<div class="audio-player">
+  <audio id="myAudio" controls>
+    <source src="data.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="controls">
+    <button type="button" onclick="rewindAudio()">⏪ 10s</button>
+    <button type="button" onclick="fastForwardAudio()">⏩ 10s</button>
+  </div>
+</div>
+
+   <h1>Machine Intelligence: Understanding and Bridging the Gap</h1>
+
+  <p>
+    Bean Kim, a research scientist at Google Brain, discussing her work on 
+    <strong>model interpretability and explainability</strong> in machine learning. 
+    Kim emphasizes the critical need to <em>understand why AI models make certain decisions</em>, 
+    highlighting that current tools for interpreting these models often fall short, 
+    showing <strong>weak correlations</strong> between their purported explanations 
+    and actual model behavior. 
+  </p>
+
+  <p>
+    She proposes that studying AI as a <q>new species</q> through 
+    <strong>observational and controlled studies</strong> could offer deeper insights, 
+    using examples from <strong>multi-agent reinforcement learning</strong> to 
+    illustrate how unexpected, emergent behaviors can be identified. 
+  </p>
+
+  <p>
+    Ultimately, Kim's research aims to foster <strong>more effective human-machine communication</strong>, 
+    enabling humans to learn from AI's superhuman capabilities, such as advanced chess strategies, 
+    and ensure AI development benefits humanity.
+  </p>
+
+ <h1>Main and Interesting Topics Discussed</h1>
+
+  <ul>
+    <li>
+      <h2>The Gap Between Human and Machine Understanding</h2>
+      <p>
+        Been Kim emphasizes that there is a significant discrepancy between what machines truly 
+        know and what humans perceive them to know. This gap arises because machines operate in 
+        different representational spaces, possess different values, and have distinct experiences 
+        of the world compared to humans.
+      </p>
+      <p><strong>Example:</strong> AlphaGo's "Move 37" in the 2016 match against Lee Sedol, a move that stunned Go 
+      commentators and players because it was not something a human would conceptualize. Been Kim's 
+      dream is to learn new insights from machines by understanding such "superhuman" concepts.</p>
+    </li>
+
+    <li>
+      <h2>Critique of Popular Model Interpretability Methods</h2>
+      <p>
+        Been Kim's research highlights that widely used interpretability tools like 
+        <strong>saliency maps, SHAP, and Integrated Gradients (IG)</strong> often fail to provide reliable insights into model behavior.
+      </p>
+      <p><strong>Example:</strong> Her team discovered that saliency maps for trained and untrained neural networks could be 
+      qualitatively and quantitatively indistinguishable, meaning random predictions yielded the same 
+      explanations as meaningful ones. Further work showed these methods could not reliably detect model 
+      errors or spurious correlations. They theoretically proved that these methods, when used for hypothesis 
+      testing about feature importance, perform no better than random guessing.</p>
+    </li>
+
+    <li>
+      <h2>Localization vs. Editing in Large Language Models (LLMs)</h2>
+      <p>
+        A common assumption is that if you can locate specific factual knowledge within an LLM 
+        (localization), you can then effectively edit that knowledge. Been Kim's work challenges this assumption.
+      </p>
+      <p><strong>Example:</strong> Critiquing methods like <strong>Rome</strong>, which proposed localizing factual knowledge 
+      (e.g., "The Space Needle is in Seattle") primarily in specific layers (like layer 6) for editing. 
+      However, her team found that knowledge is often stored across many different layers, and the correlation 
+      between where knowledge is localized and the success of editing that knowledge is effectively zero, 
+      or negatively correlated. Instead, the choice of layer for intervention was far more determinant of 
+      editing success.</p>
+    </li>
+
+    <li>
+      <h2>Studying Emerging Behaviors in Reinforcement Learning (RL) Systems</h2>
+      <p>
+        To understand complex AI behaviors, Been Kim proposes treating AI agents like "new species" 
+        and studying them through observational and controlled studies.
+      </p>
+      <ul>
+        <li>
+          <strong>Observational Study Example:</strong> Analyzing 
+          <strong>OpenAI's Hide and Seek video</strong>, where agents develop complex behaviors and even exploit 
+          bugs in the physical system. By clustering behaviors from state and action pairs, her team identified 
+          distinctions such as "running and chasing" versus "fort building".
+        </li>
+        <li>
+          <strong>Controlled Study/Intervention Example:</strong> Building multi-agent systems with embedded 
+          <strong>concept bottlenecks</strong> (e.g., position, orientation, carrying a tomato) in the network. 
+          In a <em>cooking game</em>, intervening on "team orientation" caused the biggest drop in performance, 
+          revealing its key role in coordination. Researchers could also identify "lazy agents" who contributed little. 
+          In a <em>cleanup domain</em>, interventions revealed accidental cornering dynamics that simple statistics could not detect.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <h2>Chasing the Dream: Understanding Superhuman Chess Strategy</h2>
+      <p>
+        Been Kim's ongoing work aims to understand and potentially teach humans new superhuman strategies 
+        by studying AI chess programs.
+      </p>
+      <p><strong>Example:</strong> Analyzing <strong>AlphaZero</strong>, a self-trained chess AI, which mastered opening 
+      strategies very different from human approaches. The goal is to discover new strategies within AlphaZero's 
+      embedding space and evaluate whether human grandmasters such as <strong>Magnus Carlsen</strong> can learn and 
+      apply these concepts by solving specific puzzles.</p>
+    </li>
+  </ul>
+  
+  
+    <div style="text-align: center; margin: 40px 0 0 0;">
+        <a href="https://youtu.be/cd3pRpEtjLs" target="_blank" rel="noopener">
+            Watch the original Stanford CS224N NLP with Deep Learning | 2023 | Lec. 19 - Model Interpretability & Editing with Been Kim video on YouTube
+        </a>
+    </div>
+
+
+</body>
+</html>
+
+
